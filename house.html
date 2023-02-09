@@ -9,20 +9,41 @@
 </head>
 
 <body>
-    <nav id="navBar" class="navbar-white">
-        <img src="images/logo.png" class="logo">
-        <ul class="nav-links">
-            <li><a href="#" class="active">Popular Homestays</a></li>
-            <li><a href="listing.html">Fast Booking</a></li>
-            <li><a href="house.html">Rewards</a></li>
-        </ul>
-        <ul class="nav-btns">
-            <li></li>
-            <li><button class="bus-btn" type="button"><span class="bus-span">Contact Us</span></button></li>
-            <li><a href="#" class="register-btn">Register Now</a></li>
-            <li><i class="fas fa-bars" onclick="togglebtn()"></i></li>
-        </ul>
-    </nav>
+    <div>
+        <nav id="navBar" class="navbar-white">
+            <div class="header-left">
+                <img src="images/logo.png" class="logo">
+                <ul class="nav-links">
+                    <div class="dropdown">
+                        <button class="hotel-btn" type="button" onclick="listDropdown()">Hotel List
+                            <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-hotel" id="listDropdown">
+                            <a href="#">Stelio Room</a>
+                            <a href="#">Best Price</a>
+                            <a href="#">Great Deals</a>
+                            <a href="#">New Hotels</a>
+                            <a href="#">High Rate Hotels</a>
+                        </div>
+                    </div>
+                    <li><a href="index.html">Popular Homestays</a></li>
+                    <li><a href="fast.html" class="active">Fast Booking</a></li>
+                    <li><a href="#">Rewards</a></li>
+                </ul>
+            </div>
+            <div class="header-hidden">
+
+            </div>
+            <div class="header-right">
+                <ul class="nav-btns">
+                    <li></li>
+                    <li><button class="bus-btn" type="button"><span class="bus-span">Contact Us</span></button></li>
+                    <li><a href="#" class="register-btn">Register Now</a></li>
+                    <li><i class="fas fa-bars" onclick="togglebtn()"></i></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div class="house-details">
         <div class="house-title">
             <h1>Wenge House</h1>

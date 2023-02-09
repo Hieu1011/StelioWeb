@@ -15,11 +15,10 @@
                 <img src="images/logo.png" class="logo">
                 <ul class="nav-links">
                     <div class="dropdown">
-                        <button class="hotel-btn" type="button" onclick="Dropdown()">
-                            <span class="text-list">Hotel List</span>
+                        <button class="hotel-btn" type="button" onclick="listDropdown()">Hotel List
                             <i class="fa-sharp fa-solid fa-chevron-down"></i>
                         </button>
-                        <div class="dropdown-content" id="myDropdown">
+                        <div class="dropdown-hotel" id="listDropdown">
                             <a href="#">Stelio Room</a>
                             <a href="#">Best Price</a>
                             <a href="#">Great Deals</a>
@@ -28,8 +27,8 @@
                         </div>
                     </div>
                     <li><a href="index.html" class="active">Popular Homestays</a></li>
-                    <li><a href="#">Fast Booking</a></li>
-                    <li><a href="house.html">Rewards</a></li>
+                    <li><a href="fast.html">Fast Booking</a></li>
+                    <li><a href="#">Rewards</a></li>
                 </ul>
             </div>
             <div class="header-hidden">
@@ -44,6 +43,7 @@
                 </ul>
             </div>
         </nav>
+
         <div class="container">
             <h1>Find Your Next Stay</h1>
             <div class="search-bar">
@@ -62,25 +62,68 @@
                     </div>
                 </div>
                 <form>
-                    <div class="location-input">
+                    <div class="infor" id="location-input">
+                        <i class="fa-solid fa-location-dot"></i>
                         <label>Location</label>
-                        <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <input type="text" placeholder="Where are you going?">
+                        <input class="locate-btn" list="locates" type="text" placeholder="Where are you going?"
+                            onclick="locateDropdown()">
                     </div>
-                    <div>
+                    <div class="infor">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
                         <label>Check in</label>
                         <input type="text" placeholder="Add Date">
                     </div>
-                    <div>
+                    <div class="infor">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
                         <label>Check out</label>
                         <input type="text" placeholder="Add Date">
                     </div>
                     <div>
+                        <i class="fa-solid fa-user-secret"></i>
                         <label>Guest</label>
-                        <input type="text" placeholder="Add Guest">
+                        <input class="number-people" type="value" placeholder="Number of guests">
+                        <div class="number-box">
+                            <li>
+                                <div class="number-left">
+                                    <p> Adult </p>
+                                </div>
+                                <div class="number-right adult">
+                                    <i class="fas fa-minus adultMinus"></i>
+                                    <span>0</span>
+                                    <i class="fas fa-plus adultPlus"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="number-left">
+                                    <p> Child </p>
+                                </div>
+                                <div class="number-right child">
+                                    <i class="fas fa-minus childMinus"></i>
+                                    <span>0</span>
+                                    <i class="fas fa-plus childPlus"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="number-left">
+                                    <p> Baby </p>
+                                </div>
+                                <div class="number-right baby">
+                                    <i class="fas fa-minus babyMinus"></i>
+                                    <span>0</span>
+                                    <i class="fas fa-plus babyPlus"></i>
+                                </div>
+                            </li>
+                        </div>
                     </div>
                     <button type="submit" formaction="listing.html"><img src="images/search.png"></button>
                 </form>
+                <datalist class="dropdown-locate" id="locates">
+                    <option>Gần tôi</option>
+                    <option>Hồ Chí Minh</option>
+                    <option>Hà Nội</option>
+                    <option>Đà Nẵng</option>
+                    <option>Đà Lạt</option>
+                </datalist>
             </div>
         </div>
     </div>
@@ -172,8 +215,7 @@
                     <i class="fa-solid fa-star icon-rating"></i>
                 </div>
                 <div class="price-item">
-                    <p>1.500.000Đ</p>
-                    <i class="fa-solid fa-money-bill"></i>
+                    <p>1.500.000Đ <i class="fa-solid fa-money-bill"></i> <span> / Day</span></p>
                 </div>
             </div>
             <div class="sale-item">
@@ -188,8 +230,7 @@
                     <i class="fa-solid fa-star icon-rating"></i>
                 </div>
                 <div class="price-item">
-                    <p>1.500.000Đ</p>
-                    <i class="fa-solid fa-money-bill"></i>
+                    <p>1.500.000Đ <i class="fa-solid fa-money-bill"></i> <span> / Day</span></p>
                 </div>
             </div>
             <div class="sale-item">
@@ -204,8 +245,7 @@
                     <i class="fa-solid fa-star icon-rating"></i>
                 </div>
                 <div class="price-item">
-                    <p>1.500.000Đ</p>
-                    <i class="fa-solid fa-money-bill"></i>
+                    <p>1.500.000Đ <i class="fa-solid fa-money-bill"></i> <span> / Day</span></p>
                 </div>
             </div>
             <div class="sale-item">
@@ -220,8 +260,7 @@
                     <i class="fa-solid fa-star icon-rating"></i>
                 </div>
                 <div class="price-item">
-                    <p>1.500.000Đ</p>
-                    <i class="fa-solid fa-money-bill"></i>
+                    <p>1.500.000Đ <i class="fa-solid fa-money-bill"></i> <span> / Day</span></p>
                 </div>
             </div>
         </div>
@@ -275,13 +314,12 @@
             navBar.classList.toggle("hidemenu");
         }
 
-        var list = document.getElementById("myDropdown")
-        function Dropdown() {
-            list.classList.toggle("show");
+        function listDropdown() {
+            document.getElementById("listDropdown").classList.toggle("show");
         }
-        window.onclick = function (event) {
-            if (!event.target.matches('.hotel-btn')) {
-                var dropdowns = document.getElementById("myDropdown");
+        window.addEventListener("click", function (e) {
+            if (!e.target.matches('.hotel-btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-hotel");
                 var i;
                 for (i = 0; i < dropdowns.length; i++) {
                     var openDropdown = dropdowns[i];
@@ -290,7 +328,20 @@
                     }
                 }
             }
+            event.stopPropagation();
+        })
+
+        function locateDropdown() {
+            document.getElementById("locates").style.display = "block";
         }
+        window.addEventListener("click", function closePeo(e) {
+            if (!e.target.matches('.locate-btn')) {
+                var dropdowns = document.getElementById("locates");
+                if (dropdowns.style.display === 'block')
+                    dropdowns.style.display = 'None';
+                e.stopPropagation();
+            }
+        })
         var check = false
         function Picktype(anchor) {
             var icon = anchor.querySelector("i");
@@ -314,9 +365,93 @@
             }
         }
 
+        const inputNumber = document.querySelector(".number-people");
+        const numberBox = document.querySelector(".number-box");
+        inputNumber.addEventListener("click", function () {
+            numberBox.classList.add("active");
+        })
+        // window.addEventListener("click", function (e) {
+        //     // e.stopPropagation();
+        //     // const numberBox = document.querySelector(".number-box");
+        //     if (!inputNumber.classList.contains(e.target)) {
+        //         numberBox.classList.add("active");
+        //     }
+        //     else {
+        //         console.log(e.target);
+        //         numberBox.classList.remove("active");
+        //     }
+        // })
+
+        const adultPlus = document.querySelector(".adultPlus");
+        const adultMinus = document.querySelector(".adultMinus");
+        let adultValue = document.querySelector(".adult span");
+        let i = 0
+
+        adultPlus.addEventListener("click", function () {
+            i++;
+            adultValue.innerHTML = i;
+            totalNumber();
+        })
+        adultMinus.addEventListener("click", function () {
+            if (i <= 0) {
+                i = 0;
+            }
+            else {
+                i--;
+                adultValue.innerHTML = i;
+            }
+            totalNumber();
+        })
+
+        const childPlus = document.querySelector(".childPlus");
+        const childMinus = document.querySelector(".childMinus");
+        let childValue = document.querySelector(".child span");
+        let j = 0;
+
+        childPlus.addEventListener("click", function () {
+            j++;
+            childValue.innerHTML = j;
+            totalNumber();
+        })
+        childMinus.addEventListener("click", function () {
+            if (j <= 0) {
+                j = 0;
+            }
+            else {
+                j--;
+                childValue.innerHTML = j;
+            }
+            totalNumber();
+        })
+
+        const babyPlus = document.querySelector(".babyPlus");
+        const babyMinus = document.querySelector(".babyMinus");
+        let babyValue = document.querySelector(".baby span");
+        let k = 0;
+
+        babyPlus.addEventListener("click", function () {
+            k++;
+            babyValue.innerHTML = k;
+            totalNumber();
+        })
+        babyMinus.addEventListener("click", function () {
+            if (k <= 0) {
+                k = 0;
+            }
+            else {
+                k--;
+                babyValue.innerHTML = k;
+            }
+            totalNumber();
+        })
+
+        function totalNumber() {
+            total = i + j + k;
+            inputNumber.value = total + " people";
+        }
+
     </script>
-    <script>
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/datalist-css/dist/datalist-css.min.js"></script>
 </body>
 
 </html>
