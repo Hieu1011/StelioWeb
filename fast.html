@@ -138,6 +138,10 @@
                 </div>
             </div>
             <div class="left-col">
+                    <div class="alert success">
+                        <span class="closebtn">&times;</span>
+                        <strong>Success!</strong> Booking successfully.
+                    </div>
                 <h2 class="fast-title">Entire hotels of your journey</h2>
                 <div class="fast-list">
                     <div class="fast-item">
@@ -211,7 +215,7 @@
             </div>
         </div>
     </div>
-    <div class="alert">
+    <!-- <div class="alert">
         <div class="alert danger">
             <span class="closebtn">&times;</span>
             <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
@@ -219,7 +223,7 @@
 
         <div class="alert success">
             <span class="closebtn">&times;</span>
-            <strong>Success!</strong> Indicates a successful or positive action.
+            <strong>Success!</strong> Booking successfully.
         </div>
 
         <div class="alert info">
@@ -231,12 +235,41 @@
             <span class="closebtn">&times;</span>
             <strong>Warning!</strong> Indicates a warning that might need attention.
         </div>
-    </div>
+    </div> -->
     <script>
         var navBar = document.getElementById("navBar");
         function togglebtn() {
             navBar.classList.toggle("hidemenu");
         }
+
+        function listDropdown() {
+            document.getElementById("listDropdown").classList.toggle("show");
+        }
+        window.addEventListener("click", function (e) {
+            if (!e.target.matches('.hotel-btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-hotel");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+            event.stopPropagation();
+        })
+
+        function locateDropdown() {
+            document.getElementById("locates").style.display = "block";
+        }
+        window.addEventListener("click", function closePeo(e) {
+            if (!e.target.matches('.locate-btn')) {
+                var dropdowns = document.getElementById("locates");
+                if (dropdowns.style.display === 'block')
+                    dropdowns.style.display = 'None';
+                e.stopPropagation();
+            }
+        })
 
         var close = document.getElementsByClassName("closebtn");
         var i;
@@ -260,6 +293,7 @@
         const btn_cancel = document.querySelector(".btn-choose #btn-cancel");
         const noti = document.querySelector(".sidebar .result");
         const reset = document.querySelector(".sidebar .result i");
+        const ale = document.querySelector(".success");
 
         const modal = document.querySelector(".modal");
         const name = document.querySelector(".modal-body span");
@@ -319,6 +353,8 @@
                         btn_room.innerHTML = rmitem.querySelector("p").textContent;
                         room_list.style.display = "none";
                         noti.style.display = "flex";
+                        console.log(ale);
+                        ale.style.display="block";
                         modal.style.display = "none";
                     })
                     btn_cancel_modal.addEventListener("click", function () {

@@ -162,6 +162,35 @@
         function togglebtn() {
             navBar.classList.toggle("hidemenu");
         }
+
+        function listDropdown() {
+            document.getElementById("listDropdown").classList.toggle("show");
+        }
+        window.addEventListener("click", function (e) {
+            if (!e.target.matches('.hotel-btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-hotel");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+            event.stopPropagation();
+        })
+
+        function locateDropdown() {
+            document.getElementById("locates").style.display = "block";
+        }
+        window.addEventListener("click", function closePeo(e) {
+            if (!e.target.matches('.locate-btn')) {
+                var dropdowns = document.getElementById("locates");
+                if (dropdowns.style.display === 'block')
+                    dropdowns.style.display = 'None';
+                e.stopPropagation();
+            }
+        })
     </script>
 </body>
 
