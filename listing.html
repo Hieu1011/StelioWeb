@@ -2,404 +2,190 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-wdth, initial-scale=1.0">
     <title>Listing Page</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/17dae1f014.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="background: #F0F8FF;">
-    <div>
-        <nav id="navBar" class="navbar-white">
-            <div class="header-left">
-                <img src="images/logo.png" class="logo">
-                <ul class="nav-links">
-                    <div class="dropdown">
-                        <button class="hotel-btn" type="button" onclick="listDropdown()">Hotel List
-                            <i class="fa-sharp fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="dropdown-hotel" id="listDropdown">
-                            <a href="#">Stelio Room</a>
-                            <a href="#">Best Price</a>
-                            <a href="#">Great Deals</a>
-                            <a href="#">New Hotels</a>
-                            <a href="#">High Rate Hotels</a>
+<body>
+    <nav id="navBar" class="navbar-white">
+        <div class="header-left">
+            <img src="images/logo.png" class="logo">
+            <ul class="nav-links">
+                <div class="dropdown">
+                    <button class="hotel-btn" type="button" onclick="listDropdown()">Hotel List
+                        <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-hotel" id="listDropdown">
+                        <a href="#">Stelio Room</a>
+                        <a href="#">Best Price</a>
+                        <a href="#">Great Deals</a>
+                        <a href="#">New Hotels</a>
+                        <a href="#">High Rate Hotels</a>
+                    </div>
+                </div>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="fast.html">Fast Booking</a></li>
+                <li><a href="suggest.html">Suggest</a></li>
+            </ul>
+        </div>
+        <div class="header-hidden">
+
+        </div>
+        <div class="header-right">
+            <ul class="nav-btns">
+                <li></li>
+                <li><button class="bus-btn" type="button"><span class="bus-span">Contact Us</span></button></li>
+                <li><a href="#" class="register-btn">Register Now</a></li>
+                <li><i class="fas fa-bars" onclick="togglebtn()"></i></li>
+            </ul>
+        </div>
+    </nav>
+            <nav class="sidebar-scroll">
+                <header>
+                    <h2>Có x homestay tại khu vực trên bản đồ</h2>
+                </header>
+                <div class="scrollbox">
+                    <div class="scrollbox-inner">
+                        <div class="house" onclick="window.location.href='house.html'">
+                        <div class="house-img">
+                            <img src="images/image-s1.png">
+                        </div>
+                        <div class="house-info">
+                            <p>Private Villa</p>
+                            <h3>Deluxe Queen Room With Street View</h3>
+                            <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <div class="house-price">
+                                <p>2 Guest</p>
+                                <h4>$ 100 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="house" onclick="window.location.href='house.html'">
+                        <div class="house-img">
+                            <img src="images/image-s2.png">
+                        </div>
+                        <div class="house-info">
+                            <p>Private Villa</p>
+                            <h3>Deluxe Queen Room With Street View</h3>
+                            <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <div class="house-price">
+                                <p>2 Guest</p>
+                                <h4>$ 100 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="house" onclick="window.location.href='house.html'">
+                        <div class="house-img">
+                            <img src="images/image-s3.png">
+                        </div>
+                        <div class="house-info">
+                            <p>Private Villa</p>
+                            <h3>Deluxe Queen Room With Street View</h3>
+                            <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <div class="house-price">
+                                <p>2 Guest</p>
+                                <h4>$ 100 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="house" onclick="window.location.href='house.html'">
+                        <div class="house-img">
+                            <img src="images/image-s4.png">
+                        </div>
+                        <div class="house-info">
+                            <p>Private Villa</p>
+                            <h3>Deluxe Queen Room With Street View</h3>
+                            <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <div class="house-price">
+                                <p>2 Guest</p>
+                                <h4>$ 100 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="house" onclick="window.location.href='house.html'">
+                        <div class="house-img">
+                            <img src="images/image-s5.png">
+                        </div>
+                        <div class="house-info">
+                            <p>Private Villa</p>
+                            <h3>Deluxe Queen Room With Street View</h3>
+                            <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <div class="house-price">
+                                <p>2 Guest</p>
+                                <h4>$ 100 <span>/ day</span></h4>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="house" onclick="window.location.href='house.html'">
+                        <div class="house-img">
+                            <img src="images/image-s6.png">
+                        </div>
+                        <div class="house-info">
+                            <p>Private Villa</p>
+                            <h3>Deluxe Queen Room With Street View</h3>
+                            <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <div class="house-price">
+                                <p>2 Guest</p>
+                                <h4>$ 100 <span>/ day</span></h4>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="fast.html">Fast Booking</a></li>
-                    <li><a href="listing.html" class="active">Suggest</a></li>
-                </ul>
+                </div>
+            </nav>
+    
+            <div class="content-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2312403776427!2d106.80086541462336!3d10.870008892258081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiAtIMSQSFFHIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1675343113350!5m2!1svi!2s"
+                    width=100% height=100% style="border:0;" 
+                    allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <div class="header-hidden">
-
-            </div>
-            <div class="header-right">
-                <ul class="nav-btns">
-                    <li></li>
-                    <li><button class="bus-btn" type="button"><span class="bus-span">Contact Us</span></button></li>
-                    <li><a href="#" class="register-btn">Register Now</a></li>
-                    <li><i class="fas fa-bars" onclick="togglebtn()"></i></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div class="container">
-            <h2 class="sub-title1">Near You</h2>
-            <div class="saleoff">
-                <style>
-                    html,
-                    body {
-                      position: relative;
-                      height: 100%;
-                    }
-                
-                    body {
-                      background: #eee;
-                      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-                      font-size: 14px;
-                      color: #000;
-                      margin: 0;
-                      padding: 0;
-                    }
-                
-                    .swiper {
-                      width: 100%;
-                      height: 100%;
-                    }
-    
-                  </style>
-                </head>
-    
-                <body>
-                    <!-- Swiper -->
-                    <div class="swiper mySwiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/villa.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>
-                                <div class="price-item">
-                                    <p>5km</p>      
-                                    <i class="fa-solid fa-map"></i>                              
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/homestay.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>
-                                <div class="price-item">
-                                    <p>5km</p>
-                                    <i class="fa-solid fa-map"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/hostel.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>
-                                <div class="price-item">
-                                    <p>5km</p>
-                                    <i class="fa-solid fa-map"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/novotel.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>
-                                <div class="price-item">
-                                    <p>5km</p>
-                                    <i class="fa-solid fa-map"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/homestay.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>
-                                <div class="price-item">
-                                    <p>5km</p>
-                                    <i class="fa-solid fa-map"></i>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>                                
-            </div>  
-            <h2 class="sub-title1">Sale Off</h2>
-            <div class="saleoff">
-                <style>
-                    html,
-                    body {
-                      position: relative;
-                      height: 100%;
-                    }
-                
-                    body {
-                      background: #eee;
-                      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-                      font-size: 14px;
-                      color: #000;
-                      margin: 0;
-                      padding: 0;
-                    }
-                
-                    .swiper {
-                      width: 100%;
-                      height: 100%;
-                    }
-    
-                  </style>
-                </head>
-    
-                <body>
-                    <!-- Swiper -->
-                    <div class="swiper mySwiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/villa.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/homestay.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/hostel.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                               
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/novotel.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/homestay.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                                
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>                                
-            </div>    
-            <h2 class="sub-title1">Trending</h2>
-            <div class="saleoff">
-                <style>
-                    html,
-                    body {
-                      position: relative;
-                      height: 100%;
-                    }
-                
-                    body {
-                      background: #eee;
-                      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-                      font-size: 14px;
-                      color: #000;
-                      margin: 0;
-                      padding: 0;
-                    }
-                
-                    .swiper {
-                      width: 100%;
-                      height: 100%;
-                    }
-    
-                  </style>
-                </head>
-    
-                <body>
-                    <!-- Swiper -->
-                    <div class="swiper mySwiper">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/villa.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/homestay.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/hostel.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/novotel.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="sale-item">
-                                <img src="images/homestay.png">
-                                <h3>Fine9 Hostel</h3>
-                                <div class="addr-item">
-                                    <p>Phu Quoc</p>
-                                    <i class="fa-solid fa-location-dot icon-address"></i>
-                                </div>
-                                <div class="rate-item">
-                                    <p>5 <span style="color: #858585; font-size: 15px;">(12 Review)</span></p>
-                                    <i class="fa-solid fa-star icon-rating"></i>
-                                </div>                                
-                            </div>
-                        </div>
-                      </div>
-                      <div class="swiper-pagination"></div>
-                    </div>                                
-            </div>     
-            <div class="footer">
-                <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://youtube.com/"><i class="fab fa-youtube"></i></a>
-                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                <hr>
-            </div>
-    </div>
-
     <script>
         var navBar = document.getElementById("navBar");
         function togglebtn() {
             navBar.classList.toggle("hidemenu");
         }
 
-        function listDropdown() {
-            document.getElementById("listDropdown").classList.toggle("show");
+        var list = document.getElementById("myDropdown")
+        function Dropdown() {
+            list.classList.toggle("show");
         }
-        window.addEventListener("click", function (e) {
-            if (!e.target.matches('.hotel-btn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-hotel");
+        window.onclick = function (event) {
+            if (!event.target.matches('.hotel-btn')) {
+                var dropdowns = document.getElementById("myDropdown");
                 var i;
                 for (i = 0; i < dropdowns.length; i++) {
                     var openDropdown = dropdowns[i];
@@ -408,36 +194,37 @@
                     }
                 }
             }
-            event.stopPropagation();
-        })
-
-        function locateDropdown() {
-            document.getElementById("locates").style.display = "block";
         }
-        window.addEventListener("click", function closePeo(e) {
-            if (!e.target.matches('.locate-btn')) {
-                var dropdowns = document.getElementById("locates");
-                if (dropdowns.style.display === 'block')
-                    dropdowns.style.display = 'None';
-                e.stopPropagation();
+        var check = false
+        function Picktype(anchor) {
+            var icon = anchor.querySelector("i");
+            var line = document.getElementById("tab-active-bar");
+            const items = document.querySelectorAll(".tab-active-item");
+            if (anchor.className == "tab-item") {
+                icon.classList.replace("fa-regular", "fa-solid");
+                anchor.className = "tab-active-item";
+                for (const item of items) {
+                    item.classList.add("tab-item");
+                    item.classList.remove("tab-active-item");
+                    var icon = item.querySelector("i");
+                    icon.classList.replace("fa-solid", "fa-regular");
+                }
+                if (anchor.id == "tab-hourly")
+                    line.style.transform = "translateX(81px)";
+                else if (anchor.id == "tab-overnight")
+                    line.style.transform = "translateX(216px)";
+                else
+                    line.style.transform = "translateX(356px)";
             }
-        })
+        }
+
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 4,
-          spaceBetween: 30,
-        //   autoplay:{
-        //     delay: 2000,
-        //     disableOnInteraction: false,
-        //   },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-      </script>
+        var navBar = document.getElementById("navBar");
+        function togglebtn() {
+            navBar.classList.toggle("hidemenu");
+        }
+    </script>
 </body>
 
 </html>
